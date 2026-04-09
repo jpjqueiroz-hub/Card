@@ -5,15 +5,20 @@
     --color-grey-700: hsl(0, 0%, 20%);
     --color-grey-800: hsl(0, 0%, 12%);
     --color-grey-900: hsl(0, 0%, 8%);
+    --spacing-10: 10px;
+    --spacing-20: 20px;
 }
 
+/* Reset CSS - usamos o seletor universal * === todos os elementos da página */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 body{
     text-align: center;
     background-color: var(--color-grey-900);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
 }
 
 
@@ -27,11 +32,10 @@ ol, ul{
     background-color: var(--color-grey-800);
     width: 400px;
     text-align: center;
-    border-radius: 30px;
-    padding: 2%;
-    justify-content: center;
+    border-radius: 15px;
+    padding: var(--spacing-10) var(--spacing-20);
     color: var(--color-white);
-    margin-top: 5% ;
+    margin: 10px auto;
     
 }
 
@@ -52,46 +56,41 @@ ol, ul{
 .container h1{
     font-weight: 300;
     font-size: 38px;
+    margin-block: var(--spacing-10);
 }
 .container h2{
     color: var(--color-green);
     font-weight: 200;
     font-size: 26px;
+    margin-bottom: var(--spacing-10);
 }
 
 .container p{
     color: var(--color-white);
     font-size: 15px;
     font-weight: 300;
+    margin-block: var(--spacing-20);
 }
 
 .social li{
-    align-items: center;
-    text-align: center;
     background-color: var(--color-grey-700);
-    margin-top: 10px;
-    padding: 2%;
-    width: 300px;
-    border-radius: 20px;
+    margin-block: var(--spacing-20);
+    border-radius: 15px;
 }
 
-.social li a{
-    align-items: center;
+.social a{
     text-decoration: none;
     color: var(--color-white);
-    padding: 2%;
-    margin-top: 2%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+    padding-block: var(--spacing-10);
     font-size: 20px;
     font-weight: 400;
+    display: block;
+    transition: .5s;
+    border-radius: 15px;
 }
 
-.social li:hover{
-    background-color: rgba(168, 168, 168, 0.274);
-    transform: scale(1.04);
-    transition: 0.7s;
+.social a:hover{
+    background-color: var(--color-green);
+    
 }
 
